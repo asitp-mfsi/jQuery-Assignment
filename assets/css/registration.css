@@ -1,0 +1,304 @@
+body{
+
+background-image:url("../images/background(2).jpg");
+background-attachment:fixed;
+background-position:fixed;
+background-size:cover;
+
+font-family:Electrolize,Electrolize-Regular,Electrolize Regular;
+}
+
+.mainFrame
+{
+
+	 display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+	height:350px;
+	border:10px solid white;
+	overflow:auto;
+	padding:10px;
+	border-radius:50px 0px 0px 50px;
+}
+input{
+display:none;
+}
+#header
+{
+	display:none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+	
+}
+
+#nav{
+background:orange;
+border-radius:5px;
+color:black;
+}
+#nav:hover{
+background-color:grey;
+color:white;
+}
+#btn1
+{
+ display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.success
+{
+	 display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+	height:350px;
+	border:10px solid white;
+	overflow:auto;
+	padding:10px;
+	border-radius:50px 0px 0px 50px;
+}
+
+.success h1,h2{
+ display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.success h1 
+{
+	color:red;
+	font-size:80px;
+}
+.success h2
+{
+	color:white;
+	font-weight:bold;
+}
+#overlayText
+{
+	margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+	color:red;
+	font-weight:bold;
+	font-size:60px;
+}
+#btn
+{
+	height:50px;
+	width:100px;
+	color:black;
+	font-size:25px;
+	background-color:orange;
+	margin-top:10px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+  position: relative;
+  box-shadow: 2px 2px red;
+  border-radius:100px;
+	text-align:center;
+}
+
+#btn:hover
+{
+	background-color:grey;
+	color:white;
+}
+
+#back{
+	height:50px;
+	width:100px;
+	color:black;
+	font-size:25px;
+	background-color:orange;
+	margin-top:10px;
+	display: none;
+    margin-left: auto;
+    margin-right: auto;
+  position: relative;
+  box-shadow: 2px 2px red;
+  border-radius:100px;
+	text-align:center;
+}
+#back:hover
+{
+	background-color:grey;
+	color:white;
+}
+
+footer
+{
+	text-align:center;
+	margin-bottom:0;
+	float:right;
+	color:white;
+}
+#foot{
+	 position:fixed;
+	width:100%;
+}
+#regform
+{
+	background-size: cover;
+	background-position:fixed;
+	background-attachment:fixed;
+	color:black;
+	margin-left:20px;
+	margin-right:20px;
+}
+table{
+	margin-left:auto;
+	margin-right:auto;
+	width:60%;
+	background-image:url("../images/background.jpg");
+	background-attachment:fixed;
+	background-position:fixed;
+	background-size:cover;
+}
+ tr , td{
+	border:2px solid white;
+	padding:4px;
+}
+td{
+	width:100%;
+}
+
+td:hover
+{
+	background-color:grey;
+	color:white;
+}
+#captcha1
+{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+#ans
+{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+	height:30px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0px 9999px white;
+}
+span{
+color:red;
+}
+label
+{
+	font-size:25px;	
+	display:none;
+	color:white;
+	text-shadow:3px 3px black;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.clockdate-wrapper {
+    background-color: #333;
+	margin-top:0px;
+    padding:5px;
+    max-width:350px;
+    width:50%;
+    text-align:center;
+    border-radius:5px;
+    margin:0 auto;
+	float:right;
+}
+#clock{
+    background-color:#333;
+    font-family: sans-serif;
+    font-size:30px;
+    text-shadow:0px 0px 1px #fff;
+    color:#fff;
+}
+#clock span {
+    color:#888;
+    text-shadow:0px 0px 1px #333;
+    font-size:30px;
+    position:relative;
+    top:-27px;
+    left:-10px;
+}
+#date {
+    letter-spacing:10px;
+    font-size:14px;
+    font-family:arial,sans-serif;
+    color:#fff;
+}
+
+#wishes
+{
+	border:2px solid red;
+	position:fixed;
+	margin-bottom:0px;
+	color:white;
+	float:right;
+}
+#message{
+margin-left:72%;
+}
+input[type=text]
+{
+	size:50;
+	font-size:25px;
+	color:black;
+}
+
+
+::-webkit-input-placeholder {
+  color: black;
+  font-size: 25px;
+}
+::-moz-placeholder {
+  color: black;
+  font-size: 25px;
+}
+:-ms-input-placeholder {
+  color: black;
+  font-size: 25px;
+}
+::placeholder {
+  color: black;
+  font-size: 25px;
+  font-family:Electrolize,Electrolize-Regular,Electrolize Regular;
+}
+
+.error
+{
+	border-color:red;
+}

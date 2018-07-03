@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Registration</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="assets/css/registration.css">
+	<link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
+</head>
+
+<body class="outdoor" onload="captcha();startTime()">
+<div id="header">
+<div style="float:left;margin-left:430px">
+<h1 style="font-size:50px;color:black;text-shadow: 2px 2px white;margin-top:0px">Register your Details</h1>
+
+</div>
+<div id="message">
+<div class="tooltip" >
+<h3 id="wishes"></h3>
+<span class="tooltiptext">Hi User..<br>
+Register with your correct information to access the website.<br>
+Thank you , have a great day.</span></div>
+</div>
+<div style="float:right;margin-top:0px">
+<div id="clockdate">
+
+  <div class="clockdate-wrapper">
+    <div id="clock"></div>
+    <div id="date"></div>
+  </div>
+</div>
+</div>
+
+</div>
+<div class="success">
+<div style="float:left;width:150px;height:300px">
+<img id="result_image" src="assets/images/oops1.jpg"height="200px" >
+</div>
+<div >
+<span id="success" style="float:right;margin-top:-350px" ></span>
+<span id="overlayText" style="float:right">To complete your registration click...</span>
+</div>
+</div>
+
+<div class="mainFrame" id="mainFrame">
+
+
+<form id="regform" action="pages/thankyou.html" onsubmit="return validForm()" autocomplete="on" >
+<table>
+
+<div>
+
+<tr>
+<td><label id="fname1" ><strong>First Name :</strong></label></td>
+<td><input  id="fname" type="text" name="fname" onClick="this.select();" placeholder="First Name"  >
+</td>
+</tr>
+<span id="nav" style="float:left;position:fixed;" onclick="navigationFrame('mainFrame','nav')">Full Screen</span>
+
+</div>
+<div>
+<tr>
+<td><label id="mname1" ><strong>Middle Name :</strong></label></td>
+<td><input id="mname" type="text" name="mname" onClick="this.select();" placeholder="Middle Name" >
+</td>
+</tr>
+</div>
+<tr>
+<td><label id="lname1" ><strong>Last Name :</strong></label></td>
+<td><input id="lname" type="text" name="lname" onClick="this.select();" placeholder="Last Name"  >
+</td>
+</tr>
+
+<tr>
+<td><label id="email1"><strong>Email ID :</strong></label></td>
+<td><input id="email" type="text" onClick="this.select();" name="email" placeholder="Email ID" >
+</td>
+</tr>
+<tr>
+<td><label id="lphone1"><strong>Mobile :</strong></label></td>
+<td><input id="lphone" type="text" name="lphone" onClick="this.select();" placeholder="Phone Number"  style="size:50;font-size:25px;"  >
+</td>
+</tr>
+<tr>
+<td><label id="mphone1"><strong>Mobile (Alternate)*optional :</strong></label></td>
+<td><input id="mphone" type="text" name="mphone" placeholder="Phone Number" onClick="this.select();"  style="size:50;font-size:25px;"  >
+</td>
+</tr>
+
+<tr>
+<td><label id="dob1"><strong>DOB :</strong></label></td>
+<td><input id="dob" type="date" name="dob" placeholder="Date Of Birth" style="size:50;font-size:25px;" onblur="dobvalidate()">
+</td>
+</tr>
+<tr>
+<td><label id="gen1" style="font-size:25px;"><strong>Gender :</strong></label></td>
+	<td id="gen" > <input onblur="validateGender()"  type="radio" id="male" name="gender" value="male"> <span style="color:white">Male</span><br>
+		 <input onblur="validateGender()"  type="radio" name="gender" id="female" value="female"><span style="color:white"> Female </span><br>
+		 <input onblur="validateGender()"  type="radio" name="gender" id="other" value="other"><span style="color:white"> Other </span> 
+		 </td></td>
+		 </tr>
+		
+<tr>
+<td><label id="pass1"><strong>Password :</strong></label></td>
+<td><div class="input_container">
+<input id="pass" type="password" name="pass" onClick="this.select();" placeholder="Password"  style="size:50;font-size:25px;"><image src="assets/images/eye.png" id="input_img" height="25px" width="30px" onclick="convertPassword('pass')" title="show your password">
+</div>
+</td>
+</tr>
+
+ <tr>
+<td><label id="pass2"><strong>Re-enter Password :</strong></label></td>
+<td><div class="input_container">
+<input id="passw" type="password" name="passw"   onClick="this.select();" placeholder="Password"  style="size:50;font-size:25px;"  >
+<image src="assets/images/eye.png" id="input_img" height="25px" width="30px" onclick="convertPassword('passw')" title="show your password"></div>
+</td>
+</tr>
+
+<tr>
+<th><label id="present" style="font-size:25px;width:100%;"><strong>Present Address :</strong></label></th>
+</tr>
+
+<tr>
+<td><label id="line_no1" style="font-size:25px;"><strong>Line No 1 :</strong></label></td>
+<td><input id="lineno1" type="text" name="lineno1" placeholder="" onClick="this.select();" >
+</td>
+
+</tr>
+<tr>
+<td><label id="line_no2" style="font-size:25px;"><strong>Line No 2 :</strong></label></td>
+<td><input id="lineno2" type="text" name="lineno2" placeholder="" ></td>
+</tr>
+
+<tr>
+<td><label id="city1"><strong>City :</strong></label></td>
+<td><input id="city" type="text" name="city" placeholder="City" onClick="this.select();"  >
+ </td>
+</tr>
+
+<tr>
+<td><label id="state1"><strong>State :</strong></label></td>
+<td><input id="state" type="text" name="state" placeholder="State" onClick="this.select();" > 
+</td>
+</tr>
+
+<tr>
+<td><label id="country1"><strong>Country :</strong></label></td>
+<td><input id="country" type="text" name="country" placeholder="Country" onClick="this.select();" >
+ </td>
+</tr>
+
+<tr>
+<td><label id="zip1" style="font-size:25px;"><strong>Zip Code :</strong></label></td>
+<td><input id="zip" type="text" name="zip" placeholder="Zip Code" onClick="this.select();" >
+</td>
+</tr>
+</div>
+
+</table>
+
+<br>
+<br>
+<div style="float:left;text-decoration:underline;">
+<p style="text-align:center;color:white;font-size:50px">captcha</p></div>
+
+<div id="captcha1">
+
+<table>
+<tr>
+<div>
+<td><p  id="captcha" style="text-align:center;border:5px solid black;padding:10px;font-size:35px;background-color:black;color:white">asitp</p></td>
+<td><image src="assets/images/reload.png" onclick="captcha()" width="20px" height="20px"></image></tr></td></div></table>
+<br>
+<input type="number" id="ans" name="ans" align="center" style="text-align:center" ></input>
+</div>
+</div>
+<input id="btn" type="submit" value="Submit">
+<input id="back" type="button" value="Back" onclick="backToNormal()">
+</form>
+
+
+
+<footer>
+
+<p>copyright &copy All Rights Reserved</p>
+
+</footer>
+</div>
+
+<script src="assets/js/registration.js"></script>
+</body>
+
+
+</html>
