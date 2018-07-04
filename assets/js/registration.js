@@ -44,40 +44,23 @@ $("#back").mouseout(function(){
 	},"Invalid Format");
 	
 	$("#fname1").fadeIn(1000);
-	$("#fname").fadeIn(1000);
 	$("#mname1").fadeIn(1100);
-	$("#mname").fadeIn(1100);
 	$("#lname1").fadeIn(1200);
-	$("#lname").fadeIn(1200);
 	$("#email1").fadeIn(1300);
-	$("#email").fadeIn(1300);
 	$("#lphone1").fadeIn(1400);
-	$("#lphone").fadeIn(1400);
 	$("#mphone1").fadeIn(1500);
-	$("#mphone").fadeIn(1500);
 	$("#dob1").fadeIn(1600);
-	$("#dob").fadeIn(1600);
 	$("#gen1").fadeIn(1700);
-	$("#male").fadeIn(1700);
-	$("#female").fadeIn(1700);
-	$("#other").fadeIn(1700);
 	$("#pass1").fadeIn(1800);
-	$("#pass").fadeIn(1800);
 	$("#pass2").fadeIn(1900);
-	$("#passw").fadeIn(1900);
 	$("#present").fadeIn(2000);
 	$("#line_no1").fadeIn(2100);
-	$("#lineno1").fadeIn(2100);
 	$("#line_no2").fadeIn(2200);
-	$("#lineno2").fadeIn(2200);
 	$("#city1").fadeIn(2300);
-	$("#city").fadeIn(2300);
 	$("#state1").fadeIn(2400);
-	$("#state").fadeIn(2400);
 	$("#country1").fadeIn(2500);
-	$("#country").fadeIn(2500);
 	$("#zip1").fadeIn(2600);
-	$("#zip").fadeIn(2600);
+	
 	
 	$("#regform").validate({
 		rules:{
@@ -318,6 +301,8 @@ function validForm()
 		if(val===true && checkOnSubmit===true)
 		{
 			alert("Successful Registration");
+			$(".success").hide();
+			$("#back").hide();
 		}
 		else if(val===true)
 		{
